@@ -51,10 +51,10 @@ export class PaymentPageComponent {
   }
 
   shippingDetails = {
-    firstname: '',
-    lastname: '',
     email: '',
-    phonenumber: '',
+    contact: '',
+    // amount: '',
+    name: '',
     billingAddress: '',
   };
 

@@ -1,0 +1,29 @@
+<div class="order-status-container">
+    <!-- Success Message -->
+    <div *ngIf="paymentStatus === 'success'" class="status-message success">
+      <img
+        src="asserts/success.png"
+        alt="Order Confirmed"
+        class="status-icon"
+      />
+      <h2>Order Confirmed</h2>
+      <p>
+        Your order has been successfully placed! Thank you for shopping with us.
+      </p>
+    </div>
+  
+    <!-- Failure Message -->
+    <div *ngIf="paymentStatus !== 'success'" class="status-message failure">
+      <img
+        src="asserts/failure.png"
+        alt="Order Not Confirmed"
+        class="status-icon"
+      />
+      <h2>Order Not Confirmed</h2>
+      <p>Unfortunately, your payment was not successful. Please try again.</p>
+    </div>
+  
+    <!-- Button to return to home page -->
+    <button class="return-home-btn" (click)="returnToHome()">Return to Home</button>
+  </div>
+  
