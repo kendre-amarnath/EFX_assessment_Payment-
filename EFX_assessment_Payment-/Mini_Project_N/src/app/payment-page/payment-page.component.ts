@@ -28,22 +28,18 @@ export class PaymentPageComponent {
       this.paymentservice = this.paymentservice;
   }
  
-  
-  
-
- 
   products = [
     {
       name: 'Product 1',
       price: 29.99,
       quantity: 1,
-      image: 'asserts/download.jpg',  // Image file in the assets folder
+      image: 'asserts/download.jpg',  
     },
     {
       name: 'Product 2',
       price: 149.99,
       quantity: 2,
-      image: 'asserts/download2.jpg',  // Same image for this product
+      image: 'asserts/download2.jpg',  
     },
   ];
 
@@ -67,15 +63,8 @@ export class PaymentPageComponent {
     return this.products.reduce((acc, product) => acc + (product.price * product.quantity), 0);
   }
 
-  // shippingDetails = {
-  //   firstname: '',
-  //   lastname: '',
-  //   email: '',
-  //   phonenumber: '',
-  //   billingAddress: '',
-  // };
-
-  payment : Payment = { name : "bharath ",email : "doflamingolaw2023@gmail.com",contact : " ",status: "PENDING", amount : this.calculateTotal(), address : " "}
+ 
+  payment : Payment = { name : " ",email : " ",contact : " ",status: "PENDING", amount : 0, address : " "}
   
    
   payNow(payment: Payment, event: Event): void {

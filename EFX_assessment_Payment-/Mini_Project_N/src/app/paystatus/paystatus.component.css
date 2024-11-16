@@ -1,0 +1,241 @@
+/* 
+.order-status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #f0f8ff; 
+    padding: 20px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .status-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 450px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .success {
+    color: #28a745;
+  }
+  
+
+  .success h2 {
+    font-size: 2em;
+    margin-top: 20px;
+  }
+  
+  .failure {
+    color: #dc3545; 
+  }
+  
+  .failure h2 {
+    font-size: 2em;
+    margin-top: 20px;
+  }
+  
+  .status-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .status-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .return-home-btn {
+    margin-top: 40px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .return-home-btn:hover {
+    background-color: #0056b3; 
+    transform: translateY(-2px);
+  }
+  
+  .return-home-btn:active {
+    transform: translateY(2px);
+  }
+  
+  
+  @media (max-width: 600px) {
+    .order-status-container {
+      padding: 15px;
+    }
+  
+    .status-message {
+      max-width: 100%;
+      padding: 20px;
+    }
+  
+    .status-icon {
+      width: 100px;
+      height: 100px;
+    }
+  }
+   */
+   .order-status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #f0f8ff; 
+    padding: 20px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.status-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 450px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    animation: fadeIn 1s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px; /* Space between message and order details */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.success {
+    color: #28a745;
+}
+
+.success h2 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.failure {
+    color: #dc3545;
+}
+
+.failure h2 {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+.status-icon {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.status-icon:hover {
+    transform: scale(1.1);
+}
+
+.order-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    color: #28a745;
+}
+
+.return-home-btn {
+    margin-top: 40px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.return-home-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.return-home-btn:active {
+    transform: translateY(2px);
+}
+
+@media (max-width: 600px) {
+    .order-status-container {
+        padding: 15px;
+    }
+
+    .status-message {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .status-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .order-details {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .return-home-btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.1em;
+    }
+}
