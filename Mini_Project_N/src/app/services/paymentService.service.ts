@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Payment } from '../payment';
+import { PaymentResponse } from '../payment-response';
+import { get } from 'http';
 
 interface StatusDto{
   orderId:number,
@@ -13,6 +15,7 @@ interface StatusDto{
 export class PaymentService {
 
   private baseUrl = 'http://localhost:8080';
+  
 
   constructor(private http : HttpClient) { }
   
@@ -36,4 +39,20 @@ export class PaymentService {
     const url= `${this.baseUrl}/payments/create`;
     return this.http.post<any>(url, payment);
   }
+
+  setPaymentDetails(paymentResponse: PaymentResponse): Observable<any> {
+    const url = `${this.baseUrl}/payments/response`;
+    return this.http.post<any>(url, paymentResponse);
+  }
+
+  getPaymentDetails(orderId: number): Observable<PaymentResponse> {
+    console.log(typeof orderId);
+    const url = `${this.baseUrl}/payments/response/order/${orderId}`;
+    return this.http.get<PaymentResponse>(url);
+  }
+  getPaymentDetailsByOrderId(orderId: number): Observable<PaymentResponse> {
+    const url = `${this.baseUrl}/payments/response/order/${orderId}`;
+    return this.http.get<PaymentResponse>(url);
+  }
+
 }
