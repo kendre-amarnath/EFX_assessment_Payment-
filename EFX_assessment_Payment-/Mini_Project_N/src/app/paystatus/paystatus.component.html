@@ -53,7 +53,7 @@
     <p><strong>Order ID:</strong> {{ order?.orderId }}</p>
     <p><strong>Email:</strong> {{ order?.email }}</p>
     <p><strong>Contact:</strong> {{ order?.contact }}</p>
-    <p><strong>Amount:</strong> {{ order?.amount }}</p>
+    <p><strong>Amount:</strong> {{ order?.amount | currency:'INR':'symbol':'1.2-2' }}</p>
     <p><strong>Name:</strong> {{ order?.name }}</p>
     <p><strong>Address:</strong> {{ order?.address }}</p>
   </div>
