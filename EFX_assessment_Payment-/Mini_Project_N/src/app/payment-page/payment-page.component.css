@@ -7,6 +7,12 @@
     padding: 20px;
     background-color: #f0f0f0; /* Optional background color */
   }
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
   
   /* Style for the container that holds order summary and payment details */
   .container {

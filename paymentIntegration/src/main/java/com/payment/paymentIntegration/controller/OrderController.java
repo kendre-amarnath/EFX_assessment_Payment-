@@ -8,7 +8,7 @@ import com.payment.paymentIntegration.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
+import jakarta.validation.Valid;
 import java.util.List;
 import java.util.Optional;
 
@@ -45,7 +45,7 @@ public class OrderController {
 
     // This code is use to change status
     @PutMapping("/status")
-    public ResponseEntity<Orders> updateOrderStatus(@RequestBody StatusRequestDto statusRequestDto) {
+    public ResponseEntity<Orders> updateOrderStatus(@Valid @RequestBody StatusRequestDto statusRequestDto) {
         Orders updatedOrder = ordersService.updateOrderStatus(statusRequestDto.getOrderId(),statusRequestDto.getStatus());
 
         if (updatedOrder != null) {

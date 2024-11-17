@@ -51,6 +51,24 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+			<version>3.0.2</version> <!-- Use the appropriate version -->
+		</dependency>
+
+		<!-- Hibernate Validator (Implementation of the Bean Validation API) -->
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>7.0.5.Final</version> <!-- Use the appropriate version -->
+		</dependency>
+
+		<!-- Optional: To integrate with Spring Boot -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
 
 
 
